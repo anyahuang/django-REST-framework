@@ -8,4 +8,6 @@ and here is some notes about django rest framework
 
 3. routers are tight with viewset (class based view).
 
+then I also created a consume API, get cyrpto price from 
+https://coinmarketcap.com/api/
 
