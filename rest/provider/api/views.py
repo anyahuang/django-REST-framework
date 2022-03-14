@@ -1,6 +1,6 @@
 # from rest_framework.response import Response
 # from rest_framework.decorators import api_view
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from base.models import Item
 from .serializers import ItemSerializer
 
@@ -8,7 +8,7 @@ from .serializers import ItemSerializer
 class ItemViewSet(viewsets.ModelViewSet):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
-    
+    permission_class=[permissions.IsAuthenticated]
 # inside the decorators , we put in the methods we want like POST, GET, DELETE, PUT
 # @api_view(['GET'])
 # def getData(request):
